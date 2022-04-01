@@ -1,0 +1,32 @@
+$card-gap : 30px;
+$app-spacing : 10px;
+$container-padding : 20px 30px;
+
+$desktop-min-widht : 1200px;
+$tablet-min-widht : 900px;
+$phone-min-widht : 480px;
+
+%btn{
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+:root{
+  --hue-txt-clear: aliceBlue;
+  --hue-primary-b: #323c4d;
+  --hue-primary: #3c485c;
+  --hue-secondary: #A599B5;
+  --hue-dark-grey : #363636
+}

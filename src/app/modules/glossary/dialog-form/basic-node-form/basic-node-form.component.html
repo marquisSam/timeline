@@ -1,0 +1,18 @@
+<form class="example-form" [formGroup]="nodeForm">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>The Namez</mat-label>
+    <input formControlName="nodeName" required matInput>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Node Type</mat-label>
+    <input formControlName="nodeType" required matInput>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Keywords</mat-label>
+    <input formControlName="nodeKeyWords" matInput>
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Text</mat-label>
+    <textarea formControlName="text" matInput placeholder="Lore node text..."></textarea>
+  </mat-form-field>
+</form>

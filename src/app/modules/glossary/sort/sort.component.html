@@ -1,0 +1,38 @@
+  <p>[Sort by...]</p>
+  <button (click)="triSort(byNameFilter ,'byNameFilter')" mat-button>Name
+    <mat-icon *ngIf="byNameFilter.value === null">close</mat-icon>
+    <mat-icon *ngIf="byNameFilter.value === 'ascending'">keyboard_arrow_down</mat-icon>
+    <mat-icon *ngIf="byNameFilter.value === 'descending'">keyboard_arrow_up</mat-icon>
+  </button>
+  <button (click)="triSort(byCreationDateFilter,'byCreationDateFilter')" mat-button>Creation Time
+    <mat-icon *ngIf="byCreationDateFilter.value === null">close</mat-icon>
+    <mat-icon *ngIf="byCreationDateFilter.value === 'ascending'">keyboard_arrow_down</mat-icon>
+    <mat-icon *ngIf="byCreationDateFilter.value === 'descending'">keyboard_arrow_up</mat-icon>
+  </button>
+  <hr>
+
+  <form class="2  a   q Aaexample-form" [formGroup]="uniqueFG">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Contain Words</mat-label>
+      <input formControlName="containWordsFilter" matInput>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Type de carte</mat-label>
+      <mat-select formControlName="ofTypeFilter" multiple>
+        <mat-select-trigger>
+          {{ofTypeFilter.value ? ofTypeFilter.value[0] : ''}}
+          <span *ngIf="ofTypeFilter.value?.length > 1" class="example-additional-selection">
+            (+{{ofTypeFilter.value.length - 1}} {{ofTypeFilter.value?.length === 2 ? 'other' : 'others'}})
+          </span>
+        </mat-select-trigger>
+        <mat-option [value]="'personnage'">personnage</mat-option>
+        <mat-option [value]="'lieu'">lieu</mat-option>
+        <mat-option [value]="'objet'">objet</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </form>
+  <!-- <button (click)="logger()">clicken</button> -->
+  <button mat-flat-button color="primary" (click)="sort()">Filter Node List</button>

@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Node Create</h2>
+<mat-dialog-content>
+</mat-dialog-content>
+<app-basic-node-form [node]="node.data" (formContent)="updateForm($event)"></app-basic-node-form>
+<mat-dialog-actions>
+  <button *ngIf="node.data" mat-button (click)="loreNodeService.updateLoreNode(form)" [disabled]="!form.valid" mat-dialog-close>Save</button>
+  <button *ngIf="!node.data" mat-button (click)="loreNodeService.createLoreNode(form)" [disabled]="!form.valid" mat-dialog-close>Create</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>

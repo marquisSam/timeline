@@ -1,0 +1,19 @@
+@use "../../../../../themes/variables/" as *;
+@use "../../../../../styles.scss" as *;
+:host{
+  display: flex;
+  height: 65px;
+  background-color: #A599B5;
+  width: 100%;
+  box-sizing: border-box;
+}
+.header-container{
+  align-self: center;
+  padding: 0 $app-spacing;
+  width: 100%;
+}
+h1{
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}

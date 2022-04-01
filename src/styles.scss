@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@use "./themes/variables/" as *;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;400&display=swap');
+
+html, body , p, span, h1, h2{
+  font-family: 'Fira Sans', sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0;  }
+body {
+  box-sizing: border-box;
+  background-color:var(--hue-primary);
+}
+
+.ui-container{
+  padding: $container-padding;
+}
+
+.section-contaiter{
+  width: 100%;
+  padding : 20px;
+  background-color: var(--hue-primary-b);
+  display: block;
+  margin: $app-spacing auto;
+  box-sizing: border-box;
+}
+
+
+
+
+@media only screen and (min-width: $tablet-min-widht) {
+  .section-contaiter{
+    width: 80%;
+    max-width: 900px;
+  }
+}
+
+@media only screen and (min-width: $desktop-min-widht) {
+  .section-contaiter{
+    max-width: 1400px;
+  }
+}

@@ -1,0 +1,58 @@
+@use "/src/themes/variables" as *;
+button{
+  color:var(--hue-txt-clear, aliceBlue);
+  .mat-icon{
+    font-size: 15px;
+    height: 17px;
+    width: 17px;
+    padding-left: 5px;
+  }
+}
+h1{
+  margin: 0;
+  display: inline;
+  padding: 0;
+}
+
+.node-detail-container{
+  color:var(--hue-txt-clear, aliceBlue);
+  background-color: var(--hue-dark-grey);
+  padding: 10px 15px;
+  gap: 20px 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  grid-template-areas:
+  "title action"
+  "keyword keyword"
+  "description description";
+}
+
+.grid-section{
+  border-bottom: 1px solid;
+  // border-radius: 5px;
+  border-color: rgba(aqua, 0.3);
+  padding: 5px;
+}
+
+#title{
+  grid-area : title;
+  .card-type{
+    font-size: 11px;
+  }
+}
+
+#action{
+  grid-area : action;
+  text-align: right;
+}
+
+#keyWord{
+  grid-area : keyword;
+}
+
+#description{
+  grid-area : description;
+}

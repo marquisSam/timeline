@@ -1,0 +1,29 @@
+<section class="section-contaiter">
+  <button mat-button [routerLink]="['/glossary/cards']">Retour à la Collection <mat-icon>arrow_back_ios</mat-icon></button>
+</section>
+
+<section id="card-view" class="section-contaiter">
+  <ng-container *ngIf="node$ | async as node">
+    <div class="node-detail-container">
+
+      <div id="title" class="grid-section">
+        <h1>{{node.nodeName}}</h1><span>, </span>
+        <span class="card-type">{{node.nodeType}}</span>
+      </div>
+
+      <div id="action" class="grid-section">
+        <mat-icon class="btn-icon" (click)="loreNodeService.openDialog(node)" aria-hidden="false" aria-label="edit">edit</mat-icon>
+        <mat-icon class="btn-icon" (click)="loreNodeService.removeLoreNode(node.nodeId)" aria-hidden="false" aria-label="delete">delete</mat-icon>
+      </div>
+
+      <div id="keyWord" class="grid-section">
+        {{node.nodeKeyWords}}
+      </div>
+
+      <div id="description" class="grid-section">
+        {{node.text}}
+      </div>
+
+    </div>
+  </ng-container>
+</section>

@@ -1,0 +1,25 @@
+@use "../../../../../themes/variables/" as *;
+$footer-height: 50px;
+:host{
+  display: flex;
+  height: $footer-height;
+  width: 100%;
+  box-sizing: border-box;
+}
+.footer-container{
+  box-sizing: border-box;
+  background-color: #A599B5;
+
+  align-self: center;
+  padding: 0 $app-spacing;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: $footer-height;
+}
+h1{
+  font-family: 'Fira Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}

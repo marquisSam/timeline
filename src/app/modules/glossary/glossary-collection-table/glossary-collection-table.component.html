@@ -1,0 +1,14 @@
+<section id="sort" class="section-contaiter">
+  <app-sort></app-sort>
+</section>
+
+<section id="card-table" class="section-contaiter">
+  <ng-container *ngIf="tableArray">
+    <div class="card-grid">
+      <ng-container *ngFor="let loreNode of tableArray">
+        <app-glossary-card class="grid-item" [loreNode]="loreNode"></app-glossary-card>
+      </ng-container>
+      <app-add-node-btn class="grid-item"></app-add-node-btn>
+    </div>
+  </ng-container>
+</section>

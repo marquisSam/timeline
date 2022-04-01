@@ -1,0 +1,13 @@
+@use "/src/themes/variables/variables.scss" as *;
+
+
+@media only screen and (min-width: $phone-min-widht) {
+  .mat-dialog-container{
+    min-width: 400px;
+  }
+}
+@media only screen and (min-width: $tablet-min-widht) {
+  .mat-dialog-container{
+    min-width: 620px;
+  }
+}

@@ -1,0 +1,29 @@
+
+<!-- <a routerLink="/card/{{loreNode.nodeId}}">{{loreNode.nodeId}}</a> -->
+<div class="card-container" tabindex="0" [id]="'card_' + loreNode.nodeName.toLowerCase()">
+  <div id="block-top" class="block-content">
+    <div id="item-card-name" class="single-line">
+      {{loreNode.nodeName}}
+    </div>
+    <div id="item-card-type" class="single-line">
+      {{loreNode.nodeType}}
+    </div>
+  </div>
+
+  <div id="block-img">
+    <div class="node-img-background" [style.background-image]="'url(assets/glossary-img/' + loreNode.featuredImg + ')'"></div>
+  </div>
+
+  <div id="block-keywords" class="block-content single-line">
+    <span class="keyword-line">
+      <span class="minor-kw-item" *ngFor="let mKw of loreNode.nodeKeyWords ; let i = index">
+        "{{mKw}}"
+        <span *ngIf="i < loreNode.nodeKeyWords.length - 1">, </span>
+      </span>
+    </span>
+  </div>
+
+  <div id="block-text" class="block-content">
+    <p>{{loreNode.text}}</p>
+  </div>
+</div>
