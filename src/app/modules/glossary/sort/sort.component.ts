@@ -44,11 +44,12 @@ export class SortComponent implements OnInit, OnDestroy {
         console.log("val",val.valueOf())
       })
     )
-   }
+  }
   ngOnInit(): void {}
   ngOnDestroy(): void { this.subscription$.unsubscribe();}
 
-  logger = () => console.log(this.uniqueFG.value)
+  logger = () => console.log(this.uniqueFG.value);
+
   private getTriValue = (flag?) => {
     switch(flag) {
       case null:
